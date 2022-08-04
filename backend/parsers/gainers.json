@@ -1,0 +1,3204 @@
+{
+    "nD3nAX": {
+        "request_json": {
+            "columns": [
+                "name",
+                "description",
+                "logoid",
+                "update_mode",
+                "type",
+                "typespecs",
+                "close",
+                "pricescale",
+                "minmov",
+                "fractional",
+                "minmove2",
+                "currency",
+                "change",
+                "change_abs",
+                "Recommend.All",
+                "volume",
+                "Value.Traded",
+                "market_cap_basic",
+                "fundamental_currency_code",
+                "price_earnings_ttm",
+                "earnings_per_share_basic_ttm",
+                "number_of_employees",
+                "sector",
+                "market"
+            ],
+            "options": {
+                "active_symbols_only": true,
+                "lang": "en"
+            },
+            "filter": [
+                {
+                    "left": "exchange",
+                    "operation": "in_range",
+                    "right": [
+                        "AMEX",
+                        "NASDAQ",
+                        "NYSE"
+                    ]
+                },
+                {
+                    "left": "is_primary",
+                    "operation": "equal",
+                    "right": true
+                },
+                {
+                    "left": "typespecs",
+                    "operation": "has",
+                    "right": "common"
+                },
+                {
+                    "left": "typespecs",
+                    "operation": "has_none_of",
+                    "right": "preferred"
+                },
+                {
+                    "left": "type",
+                    "operation": "equal",
+                    "right": "stock"
+                },
+                {
+                    "left": "close",
+                    "operation": "in_range",
+                    "right": [
+                        2,
+                        10000
+                    ]
+                },
+                {
+                    "left": "change",
+                    "operation": "greater",
+                    "right": 0
+                },
+                {
+                    "left": "change",
+                    "operation": "nempty"
+                }
+            ],
+            "sort": {
+                "sortBy": "change",
+                "sortOrder": "desc"
+            },
+            "markets": [
+                "america"
+            ],
+            "range": [
+                0,
+                100
+            ]
+        },
+        "response_json": {
+            "totalCount": 3342,
+            "data": [
+                {
+                    "s": "NASDAQ:USAK",
+                    "d": [
+                        0 "USAK",
+                        1 "USA Truck, Inc.",
+                        2 "usa-truck",
+                        3 "delayed_streaming_900",
+                        4 "stock",
+                        5 [
+                            "common"
+                        ],
+                        6 30.8,
+                        7 100,
+                        8 1,
+                        9 "false",
+                        10 0,
+                        11 "USD",
+                        12 111.24828532,
+                        13 16.22,
+                        14 0.69393939,
+                        15 2057016,
+                        16 63356092.8,
+                        17 131334698,
+                        18 "USD",
+                        19 3.82536601,
+                        20 3.8914,
+                        21 2100,
+                        22 "Transportation",
+                        23 "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:TBLT",
+                    "d": [
+                        "TBLT",
+                        "ToughBuilt Industries, Inc.",
+                        "toughbuilt",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.8587,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        64.29310345,
+                        1.1187,
+                        -0.10909091,
+                        152873688,
+                        437020011.8856,
+                        6087841.51793103,
+                        "USD",
+                        null,
+                        -56.2125,
+                        185,
+                        "Consumer Non-Durables",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:FEMY",
+                    "d": [
+                        "FEMY",
+                        "Femasys Inc.",
+                        "femasys",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.08,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        35.06493506,
+                        0.54,
+                        0.35757576,
+                        859204,
+                        1787144.32,
+                        24572308.25974026,
+                        "USD",
+                        null,
+                        -0.7279,
+                        27,
+                        "Electronic Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:ZEN",
+                    "d": [
+                        "ZEN",
+                        "Zendesk, Inc.",
+                        "zendesk",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        74.5,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        28.55910267,
+                        16.55,
+                        0.02424242,
+                        33509970,
+                        2496492765,
+                        9129478005.936152,
+                        "USD",
+                        null,
+                        -2.0031,
+                        5860,
+                        "Technology Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:WRAP",
+                    "d": [
+                        "WRAP",
+                        "Wrap Technologies, Inc.",
+                        "wrap-technologies",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.4001,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        28.34759358,
+                        0.5301,
+                        0.44848485,
+                        26150449,
+                        62763692.6449,
+                        98332869.65251336,
+                        "USD",
+                        null,
+                        -0.6136,
+                        68,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:AERC",
+                    "d": [
+                        "AERC",
+                        "AeroClean Technologies, Inc.",
+                        "aeroclean",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        15.08,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        26.93602694,
+                        3.2,
+                        0.47552448,
+                        7597178,
+                        114565444.24,
+                        209274350.1683502,
+                        "USD",
+                        null,
+                        null,
+                        7,
+                        "Technology Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:CMRX",
+                    "d": [
+                        "CMRX",
+                        "Chimerix, Inc.",
+                        "chimerix",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.2,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        20.87912088,
+                        0.38,
+                        0.2030303,
+                        18329367,
+                        40324607.40000001,
+                        192359601.31868136,
+                        "USD",
+                        null,
+                        -1.1601,
+                        87,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:ANEB",
+                    "d": [
+                        "ANEB",
+                        "Anebulo Pharmaceuticals, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        4.9962,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        18.11347518,
+                        0.7662,
+                        0.35757576,
+                        60428,
+                        301910.3736,
+                        116634122.79886521,
+                        "USD",
+                        null,
+                        -1.4399,
+                        3,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:BOXD",
+                    "d": [
+                        "BOXD",
+                        "Boxed, Inc.",
+                        "boxed",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.08,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        16.20111732,
+                        0.29,
+                        -0.08484848,
+                        24280473,
+                        50503383.84,
+                        143357433.4748603,
+                        "USD",
+                        null,
+                        -1.1327,
+                        250,
+                        "Retail Trade",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:HLVX",
+                    "d": [
+                        "HLVX",
+                        "HilleVax, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        13.75,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        15.54621849,
+                        1.85,
+                        0.61111111,
+                        135443,
+                        1862341.25,
+                        459624369.7478992,
+                        "USD",
+                        null,
+                        null,
+                        null,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:SOPH",
+                    "d": [
+                        "SOPH",
+                        "SOPHiA GENETICS SA",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        3.21,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        14.64285714,
+                        0.41,
+                        -0.04242424,
+                        30096,
+                        96608.16,
+                        205113099.33214283,
+                        "USD",
+                        null,
+                        -1.3543,
+                        518,
+                        "Technology Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:ZVIA",
+                    "d": [
+                        "ZVIA",
+                        "Zevia PBC",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        3.045,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        14.47368421,
+                        0.385,
+                        0.31515152,
+                        131970,
+                        401848.65,
+                        204652806.15789473,
+                        "USD",
+                        null,
+                        -1.2921,
+                        131,
+                        "Consumer Non-Durables",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:RCL",
+                    "d": [
+                        "RCL",
+                        "D/B/A Royal Caribbean Cruises Ltd.",
+                        "royal-caribbean-cruises",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        41.245,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        14.34710286,
+                        5.175,
+                        -0.26666667,
+                        7745856,
+                        319477830.71999997,
+                        10515672456.283476,
+                        "USD",
+                        null,
+                        -20.7909,
+                        85000,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:ZGN",
+                    "d": [
+                        "ZGN",
+                        "Ermenegildo Zegna N.V.",
+                        "ermenegildo-zegna-n-v",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        11.89,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        13.45419847,
+                        1.41,
+                        0.64335664,
+                        558921,
+                        6645570.69,
+                        2881465973.5400767,
+                        "USD",
+                        null,
+                        -0.2236,
+                        6049,
+                        "Consumer Non-Durables",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:PETV",
+                    "d": [
+                        "PETV",
+                        "PetVivo Holdings, Inc.",
+                        "petvivo",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.6883,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        13.43037975,
+                        0.3183,
+                        0.44545455,
+                        223076,
+                        599695.2108,
+                        26278742.75544304,
+                        "USD",
+                        null,
+                        -0.4128,
+                        null,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:EVOK",
+                    "d": [
+                        "EVOK",
+                        "Evoke Pharma, Inc.",
+                        "evoke-pharma",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        3.275,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        13.32179931,
+                        0.385,
+                        0.15757576,
+                        245214,
+                        803075.85,
+                        10948564.10899654,
+                        "USD",
+                        null,
+                        -2.9854,
+                        4,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:NCLH",
+                    "d": [
+                        "NCLH",
+                        "Norwegian Cruise Line Holdings Ltd.",
+                        "norwegian-cruise-line",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        12.975,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        13.21989529,
+                        1.515,
+                        -0.17575758,
+                        21202455,
+                        275101853.625,
+                        5437837248.02356,
+                        "USD",
+                        null,
+                        -10.5936,
+                        34700,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:REAL",
+                    "d": [
+                        "REAL",
+                        "The RealReal, Inc.",
+                        "the-realreal",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        3.555,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        13.21656051,
+                        0.415,
+                        0.2030303,
+                        3102918,
+                        11030873.49,
+                        335496843.7452229,
+                        "USD",
+                        null,
+                        -2.5769,
+                        3355,
+                        "Retail Trade",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:SSNT",
+                    "d": [
+                        "SSNT",
+                        "SilverSun Technologies, Inc.",
+                        "silversun-technologies",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.8542,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        12.81422925,
+                        0.3242,
+                        0.33636364,
+                        983540,
+                        2807219.868,
+                        14659675.47960474,
+                        "USD",
+                        null,
+                        -0.1028,
+                        165,
+                        "Technology Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:APRN",
+                    "d": [
+                        "APRN",
+                        "Blue Apron Holdings, Inc.",
+                        "blue-apron",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        3.2899,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        12.66780822,
+                        0.3699,
+                        0.22424242,
+                        2964496,
+                        9752895.3904,
+                        113070361.28452057,
+                        "USD",
+                        null,
+                        -4.2686,
+                        1988,
+                        "Retail Trade",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:CVLG",
+                    "d": [
+                        "CVLG",
+                        "Covenant Logistics Group, Inc.",
+                        "covenant-logistics",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        25.48,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        12.5939019,
+                        2.85,
+                        0.6030303,
+                        157074,
+                        4002245.52,
+                        397432897.6703491,
+                        "USD",
+                        5.33613148,
+                        4.2952,
+                        4500,
+                        "Transportation",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:EBIX",
+                    "d": [
+                        "EBIX",
+                        "Ebix, Inc.",
+                        "ebix",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        18.46,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        12.49238269,
+                        2.05,
+                        -0.33333333,
+                        272111,
+                        5023169.06,
+                        570502786.8628885,
+                        "USD",
+                        7.67180926,
+                        2.1458,
+                        10030,
+                        "Technology Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:INAB",
+                    "d": [
+                        "INAB",
+                        "IN8bio, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.53,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        12.44444444,
+                        0.28,
+                        0.11212121,
+                        3595,
+                        9095.35,
+                        47661330.78666665,
+                        "USD",
+                        null,
+                        null,
+                        19,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:SWBI",
+                    "d": [
+                        "SWBI",
+                        "Smith & Wesson Brands, Inc.",
+                        "smith-and-wesson",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        16.13,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        12.32590529,
+                        1.77,
+                        0.51515152,
+                        2873332,
+                        46346845.16,
+                        734084623.3495822,
+                        "USD",
+                        2.89556994,
+                        5.018,
+                        2240,
+                        "Electronic Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:GCTK",
+                    "d": [
+                        "GCTK",
+                        "GlucoTrack, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.885,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        12.25680934,
+                        0.315,
+                        0.15757576,
+                        11137,
+                        32130.245,
+                        44607167.27237354,
+                        "USD",
+                        null,
+                        -0.2754,
+                        5,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:ZETA",
+                    "d": [
+                        "ZETA",
+                        "Zeta Global Holdings Corp.",
+                        "zeta",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        5.66,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        12.07920792,
+                        0.61,
+                        -0.33333333,
+                        1412988,
+                        7997512.08,
+                        1148574478.372277,
+                        "USD",
+                        null,
+                        -1.7206,
+                        1434,
+                        "Technology Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:OII",
+                    "d": [
+                        "OII",
+                        "Oceaneering International, Inc.",
+                        "oceaneering-international",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        9.875,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        11.83465459,
+                        1.045,
+                        -0.30909091,
+                        1239915,
+                        12244160.625,
+                        990004151.2599094,
+                        "USD",
+                        null,
+                        -0.5924,
+                        8500,
+                        "Industrial Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:ADCT",
+                    "d": [
+                        "ADCT",
+                        "ADC Therapeutics SA",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        7.69,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        11.77325581,
+                        0.81,
+                        0.2030303,
+                        223254,
+                        1716823.26,
+                        543911505.8909883,
+                        "USD",
+                        null,
+                        -2.5427,
+                        312,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:CSTM",
+                    "d": [
+                        "CSTM",
+                        "Constellium SE",
+                        "constellium-nv",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        13.35,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        11.71548117,
+                        1.4,
+                        -0.26363636,
+                        1279130,
+                        17076385.5,
+                        1891392630.8786612,
+                        "USD",
+                        3.90970064,
+                        3.1823,
+                        12000,
+                        "Commercial Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:GSM",
+                    "d": [
+                        "GSM",
+                        "Ferroglobe PLC",
+                        "ferroglobe",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        6.24,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        11.62790698,
+                        0.65,
+                        -0.33333333,
+                        769946,
+                        4804463.04,
+                        1168835935.255814,
+                        "USD",
+                        8.90978642,
+                        0.6347,
+                        3425,
+                        "Process Industries",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:CENX",
+                    "d": [
+                        "CENX",
+                        "Century Aluminum Company",
+                        "century-aluminum",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        7.935,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        11.60337553,
+                        0.825,
+                        -0.26363636,
+                        2728833,
+                        21653289.855,
+                        723922864.299578,
+                        "USD",
+                        null,
+                        -0.1648,
+                        2512,
+                        "Non-Energy Minerals",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:WOLF",
+                    "d": [
+                        "WOLF",
+                        "Wolfspeed, Inc.",
+                        "wolfspeed",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        70.05,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        11.3672496,
+                        7.15,
+                        0.09090909,
+                        1881557,
+                        131803067.85,
+                        8660612335.347378,
+                        "USD",
+                        null,
+                        -3.2444,
+                        3466,
+                        "Electronic Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "AMEX:ISDR",
+                    "d": [
+                        "ISDR",
+                        "Issuer Direct Corporation",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        24.74,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        11.19101124,
+                        2.49,
+                        0.24545455,
+                        14760,
+                        365162.4,
+                        93594191.9919101,
+                        "USD",
+                        26.08440797,
+                        0.8622,
+                        86,
+                        "Technology Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:DISH",
+                    "d": [
+                        "DISH",
+                        "DISH Network Corporation",
+                        "dish-network",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        18.78,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        11.19005329,
+                        1.89,
+                        -0.17575758,
+                        3601020,
+                        67627155.60000001,
+                        9953302723.158081,
+                        "USD",
+                        4.85316936,
+                        4.1882,
+                        14500,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:ICVX",
+                    "d": [
+                        "ICVX",
+                        "Icosavax, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        8.76,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        11.16751269,
+                        0.88,
+                        0.29090909,
+                        65705,
+                        575575.8,
+                        348007031.4670051,
+                        "USD",
+                        null,
+                        -2.1604,
+                        34,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:NBR",
+                    "d": [
+                        "NBR",
+                        "Nabors Industries Ltd.",
+                        "nabors-industries",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        134.22,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.934788,
+                        13.23,
+                        -0.17575758,
+                        143724,
+                        19290635.28,
+                        1263267569.8175054,
+                        "USD",
+                        null,
+                        -79.172,
+                        10000,
+                        "Industrial Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:WYNN",
+                    "d": [
+                        "WYNN",
+                        "Wynn Resorts, Limited",
+                        "wynn-resorts",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        57.6899,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.89946175,
+                        5.6699,
+                        -0.22121212,
+                        4173346,
+                        240759913.4054,
+                        6690006459.942558,
+                        "USD",
+                        null,
+                        -5.7345,
+                        26950,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:CINC",
+                    "d": [
+                        "CINC",
+                        "CinCor Pharma, Inc.",
+                        "cincor-pharma",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        18.695,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.81802015,
+                        1.825,
+                        0.41258741,
+                        48180,
+                        900725.1,
+                        704986827.6241848,
+                        "USD",
+                        null,
+                        null,
+                        15,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:MKTW",
+                    "d": [
+                        "MKTW",
+                        "MarketWise, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        4.11,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.78167116,
+                        0.4,
+                        0.29090909,
+                        45477,
+                        186910.47,
+                        1308529422.3638816,
+                        "USD",
+                        null,
+                        -1.4136,
+                        800,
+                        "Technology Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:CCL",
+                    "d": [
+                        "CCL",
+                        "Carnival Corporation",
+                        "carnival",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        10.69,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.77720207,
+                        1.04,
+                        -0.17575758,
+                        62172764,
+                        664626847.16,
+                        12012388944.986528,
+                        "USD",
+                        null,
+                        -8.305,
+                        null,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:PENN",
+                    "d": [
+                        "PENN",
+                        "Penn National Gaming, Inc.",
+                        "penn-national-gaming",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        31.58,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.76815153,
+                        3.07,
+                        0.15757576,
+                        2157530,
+                        68134797.39999999,
+                        5267632802.827077,
+                        "USD",
+                        13.03850727,
+                        2.3921,
+                        21973,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:CANO",
+                    "d": [
+                        "CANO",
+                        "Cano Health, Inc.",
+                        "cano-health",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        5.325,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.70686071,
+                        0.515,
+                        0.24545455,
+                        3562792,
+                        18971867.4,
+                        2579802898.3471937,
+                        "USD",
+                        null,
+                        -0.0218,
+                        2150,
+                        "Health Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:ACET",
+                    "d": [
+                        "ACET",
+                        "Adicet Bio, Inc.",
+                        "adicet-bio",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        13.3,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.64891847,
+                        1.28,
+                        0.53636364,
+                        210387,
+                        2798147.1,
+                        532057960.11647254,
+                        "USD",
+                        null,
+                        -1.131,
+                        86,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:OYST",
+                    "d": [
+                        "OYST",
+                        "Oyster Point Pharma, Inc.",
+                        "oyster-point-pharma",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        4.91,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.58558559,
+                        0.47,
+                        0.2030303,
+                        123507,
+                        606419.37,
+                        130946470.90090089,
+                        "USD",
+                        null,
+                        -4.9301,
+                        62,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:CLNN",
+                    "d": [
+                        "CLNN",
+                        "Clene Inc.",
+                        "clene",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        3.06,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.46931408,
+                        0.29,
+                        0.17575758,
+                        106044,
+                        324494.64,
+                        193565029.1913357,
+                        "USD",
+                        12.76497696,
+                        0.27,
+                        102,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:CZR",
+                    "d": [
+                        "CZR",
+                        "Caesars Entertainment, Inc.",
+                        "caesars",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        43.65,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.45040486,
+                        4.13,
+                        -0.17575758,
+                        2762943,
+                        120602461.95,
+                        9357081885.30744,
+                        "USD",
+                        null,
+                        -5.9547,
+                        49000,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:TOP",
+                    "d": [
+                        "TOP",
+                        "Zhong Yang Financial Group Limited",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        45,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.42944785,
+                        4.25,
+                        0.33333333,
+                        333588,
+                        15011460,
+                        1575000000,
+                        "USD",
+                        null,
+                        null,
+                        11,
+                        "Finance",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:VINP",
+                    "d": [
+                        "VINP",
+                        "Vinci Partners Investments Ltd.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        11.07,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.36889332,
+                        1.04,
+                        0.11212121,
+                        17742,
+                        196403.94,
+                        613932709.3788635,
+                        "USD",
+                        14.38405277,
+                        0.6973349,
+                        244,
+                        "Finance",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:XOS",
+                    "d": [
+                        "XOS",
+                        "Xos, Inc.",
+                        "xos",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.449,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.31531532,
+                        0.229,
+                        -0.22121212,
+                        560359,
+                        1372319.191,
+                        401215718.5054054,
+                        "USD",
+                        11.70268846,
+                        0.2626,
+                        329,
+                        "Consumer Durables",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:HROW",
+                    "d": [
+                        "HROW",
+                        "Harrow Health, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        7.07,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.29641186,
+                        0.66,
+                        0.24545455,
+                        51895,
+                        366897.65,
+                        191110056.78315133,
+                        "USD",
+                        null,
+                        -0.7828,
+                        182,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:MGM",
+                    "d": [
+                        "MGM",
+                        "MGM Resorts International",
+                        "mgm-resorts",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        29.96,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.26867869,
+                        2.79,
+                        -0.22121212,
+                        5268473,
+                        157843451.08,
+                        12764525328.95252,
+                        "USD",
+                        8.83261272,
+                        3.1137,
+                        59000,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:CLDX",
+                    "d": [
+                        "CLDX",
+                        "Celldex Therapeutics, Inc.",
+                        "celldex-therapeutics",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        28.82,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.25248661,
+                        2.68,
+                        0.38181818,
+                        759826,
+                        21898185.32,
+                        1347460299.7459831,
+                        "USD",
+                        null,
+                        -1.7122,
+                        134,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:HP",
+                    "d": [
+                        "HP",
+                        "Helmerich & Payne, Inc.",
+                        "helmerich-payne",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        42.24,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.20088703,
+                        3.91,
+                        -0.26666667,
+                        880364,
+                        37186575.36,
+                        4447342859.42082,
+                        "USD",
+                        null,
+                        -1.7869,
+                        5444,
+                        "Industrial Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:ARNC",
+                    "d": [
+                        "ARNC",
+                        "Arconic Corporation",
+                        "arconic",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        28.12,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.14492754,
+                        2.59,
+                        0.37878788,
+                        499278,
+                        14039697.36,
+                        2974658078.086957,
+                        "USD",
+                        null,
+                        -3.6938,
+                        13900,
+                        "Non-Energy Minerals",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:SPT",
+                    "d": [
+                        "SPT",
+                        "Sprout Social, Inc",
+                        "sprout-social",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        67.275,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.12440661,
+                        6.185,
+                        0.42424242,
+                        612114,
+                        41179969.35,
+                        3665941245.5009,
+                        "USD",
+                        null,
+                        -0.5939,
+                        887,
+                        "Technology Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:SIX",
+                    "d": [
+                        "SIX",
+                        "Six Flags Entertainment Corporation New",
+                        "six-flags",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        23.14,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.08563273,
+                        2.12,
+                        -0.22121212,
+                        1943781,
+                        44979092.34000001,
+                        2000291788.3977163,
+                        "USD",
+                        11.48571116,
+                        1.8684,
+                        1970,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:SEER",
+                    "d": [
+                        "SEER",
+                        "Seer, Inc.",
+                        "seer",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        9.3,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        10.0591716,
+                        0.85,
+                        0.29090909,
+                        412681,
+                        3837933.3,
+                        580805028.5680474,
+                        "USD",
+                        null,
+                        -1.2759,
+                        118,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:CNEY",
+                    "d": [
+                        "CNEY",
+                        "CN Energy Group Inc.",
+                        "cn-energy",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.0876,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.95470347,
+                        0.189,
+                        0.42424242,
+                        7703,
+                        16080.7828,
+                        48189380.58042768,
+                        "USD",
+                        null,
+                        null,
+                        160,
+                        "Producer Manufacturing",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:BALY",
+                    "d": [
+                        "BALY",
+                        "Bally's Corporation",
+                        "bally-s-corporation",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        20.74,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.90990991,
+                        1.87,
+                        -0.33333333,
+                        915441,
+                        18986246.34,
+                        1079340285.7477477,
+                        "USD",
+                        null,
+                        -0.7029,
+                        9460,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:BCAB",
+                    "d": [
+                        "BCAB",
+                        "BioAtla, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        3.295,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.83333333,
+                        0.295,
+                        0.22424242,
+                        341353,
+                        1124758.135,
+                        123278875.18666665,
+                        "USD",
+                        null,
+                        -2.8554,
+                        56,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:PTSI",
+                    "d": [
+                        "PTSI",
+                        "P.A.M. Transportation Services, Inc.",
+                        "p-a-resources-berhad",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        28.52,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.73451327,
+                        2.53,
+                        0.13333333,
+                        23109,
+                        659068.68,
+                        635063489.2743362,
+                        "USD",
+                        6.65949215,
+                        3.9307,
+                        2510,
+                        "Transportation",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:CURO",
+                    "d": [
+                        "CURO",
+                        "CURO Group Holdings Corp.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        6.3203,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.72743056,
+                        0.5603,
+                        -0.17575758,
+                        58735,
+                        371222.8205,
+                        254342298.24840277,
+                        "USD",
+                        8.36844399,
+                        0.8147,
+                        5200,
+                        "Finance",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:IKNA",
+                    "d": [
+                        "IKNA",
+                        "Ikena Oncology, Inc.",
+                        "ikena-oncology",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        4.55,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.63855422,
+                        0.4,
+                        0.2,
+                        239634,
+                        1090334.7,
+                        164542964.56626505,
+                        "USD",
+                        null,
+                        -1.1471,
+                        67,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:USX",
+                    "d": [
+                        "USX",
+                        "U.S. Xpress Enterprises, Inc.",
+                        "u-s-xpress",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.663,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.58847737,
+                        0.233,
+                        -0.26666667,
+                        536706,
+                        1429248.078,
+                        136175822.24320987,
+                        "USD",
+                        null,
+                        -0.0085,
+                        8689,
+                        "Transportation",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:NINE",
+                    "d": [
+                        "NINE",
+                        "Nine Energy Service, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.63,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.58333333,
+                        0.23,
+                        -0.13030303,
+                        400927,
+                        1054438.01,
+                        86051931.04583333,
+                        "USD",
+                        null,
+                        -2.0768,
+                        944,
+                        "Industrial Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:ASIX",
+                    "d": [
+                        "ASIX",
+                        "AdvanSix Inc.",
+                        "advansix",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        34.395,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.57311246,
+                        3.005,
+                        -0.35454545,
+                        266434,
+                        9163997.43,
+                        966612725.1842943,
+                        "USD",
+                        5.24460335,
+                        6.2009,
+                        1375,
+                        "Process Industries",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:RPID",
+                    "d": [
+                        "RPID",
+                        "Rapid Micro Biosystems, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        3.56,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.53846154,
+                        0.31,
+                        -0.26666667,
+                        134645,
+                        479336.2,
+                        149315126.92923078,
+                        "USD",
+                        null,
+                        -1.6544,
+                        202,
+                        "Producer Manufacturing",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:LIND",
+                    "d": [
+                        "LIND",
+                        "Lindblad Expeditions Holdings Inc.",
+                        "lindblad-expeditions",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        10.01,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.51859956,
+                        0.87,
+                        -0.1969697,
+                        645335,
+                        6459803.35,
+                        509929414.52407,
+                        "USD",
+                        null,
+                        -2.6435,
+                        720,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:CPS",
+                    "d": [
+                        "CPS",
+                        "Cooper-Standard Holdings Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        5.18,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.51374207,
+                        0.45,
+                        0.06969697,
+                        252237,
+                        1306587.66,
+                        88385667.58562365,
+                        "USD",
+                        null,
+                        -20.4959,
+                        22600,
+                        "Producer Manufacturing",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:USAU",
+                    "d": [
+                        "USAU",
+                        "U.S. Gold Corp.",
+                        "us-gold",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        4.1603,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.48157895,
+                        0.3603,
+                        -0.26363636,
+                        114743,
+                        477365.3029,
+                        33725319.77060528,
+                        "USD",
+                        null,
+                        -2.126,
+                        3,
+                        "Non-Energy Minerals",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:BW",
+                    "d": [
+                        "BW",
+                        "Babcock & Wilcox Enterprises, Inc.",
+                        "babcock-and-wilcox",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        6.36,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.46643718,
+                        0.55,
+                        -0.22121212,
+                        238822,
+                        1518907.92,
+                        549108590.8089502,
+                        "USD",
+                        19.91089788,
+                        0.2961,
+                        1800,
+                        "Electronic Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:DESP",
+                    "d": [
+                        "DESP",
+                        "Despegar.com, Corp.",
+                        "despegar-com",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        8.34,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.4488189,
+                        0.72,
+                        0.02424242,
+                        352809,
+                        2942427.06,
+                        552422357.8031496,
+                        "USD",
+                        null,
+                        -1.2561971,
+                        3824,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:DKS",
+                    "d": [
+                        "DKS",
+                        "Dick's Sporting Goods Inc",
+                        "dicks-sporting-goods",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        85.1,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.31278099,
+                        7.25,
+                        0.2030303,
+                        1736387,
+                        147766533.7,
+                        6852871695.248554,
+                        "USD",
+                        6.0430817,
+                        17.4021,
+                        50800,
+                        "Retail Trade",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:GATO",
+                    "d": [
+                        "GATO",
+                        "Gatos Silver, Inc.",
+                        "gatos-silver",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        3.2573,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.30536913,
+                        0.2773,
+                        0.15757576,
+                        665813,
+                        2168752.6849,
+                        225191778.43060404,
+                        "USD",
+                        null,
+                        -0.1812,
+                        null,
+                        "Non-Energy Minerals",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:BOOM",
+                    "d": [
+                        "BOOM",
+                        "DMC Global Inc.",
+                        "dmc-global",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        18.8,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.30232558,
+                        1.6,
+                        -0.30909091,
+                        76742,
+                        1442749.6,
+                        366547269.2790698,
+                        "USD",
+                        null,
+                        -0.7297,
+                        1503,
+                        "Industrial Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:GASS",
+                    "d": [
+                        "GASS",
+                        "StealthGas, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        3.18,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.27835052,
+                        0.27,
+                        0.17878788,
+                        274948,
+                        874334.64,
+                        121482932.6185567,
+                        "USD",
+                        null,
+                        -0.747,
+                        null,
+                        "Transportation",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:USFD",
+                    "d": [
+                        "USFD",
+                        "US Foods Holding Corp.",
+                        "us-foods",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        31.1,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.23779417,
+                        2.63,
+                        0.02424242,
+                        1172203,
+                        36455513.30000001,
+                        6963035284.773446,
+                        "USD",
+                        44.58888019,
+                        0.6483,
+                        28000,
+                        "Distribution Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:XPON",
+                    "d": [
+                        "XPON",
+                        "Expion360 Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.49,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.21052632,
+                        0.21,
+                        -0.36363636,
+                        82846,
+                        206286.54,
+                        10707000,
+                        "USD",
+                        null,
+                        null,
+                        21,
+                        "Producer Manufacturing",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:DYN",
+                    "d": [
+                        "DYN",
+                        "Dyne Therapeutics, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        7.01,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.19003115,
+                        0.59,
+                        0.24545455,
+                        170918,
+                        1198135.18,
+                        362091196.60124606,
+                        "USD",
+                        null,
+                        -3.1089,
+                        95,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:AIRS",
+                    "d": [
+                        "AIRS",
+                        "AirSculpt Technologies, Inc.",
+                        "airsculpt-technologies",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        7.205,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.16666667,
+                        0.605,
+                        -0.23076923,
+                        102219,
+                        736487.895,
+                        400887289.48333347,
+                        "USD",
+                        null,
+                        null,
+                        240,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:GLSI",
+                    "d": [
+                        "GLSI",
+                        "Greenwich LifeSciences, Inc.",
+                        "greenwich-lifesciences",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        9.18,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.15576694,
+                        0.77,
+                        0.06666667,
+                        122661,
+                        1126027.98,
+                        119343281.22235434,
+                        "USD",
+                        null,
+                        -0.4563,
+                        null,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:PLAY",
+                    "d": [
+                        "PLAY",
+                        "Dave & Buster's Entertainment, Inc.",
+                        "dave-and-buster-s-entertainment",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        35.45,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.04337127,
+                        2.94,
+                        -0.22121212,
+                        542581,
+                        19234496.45,
+                        1734740164.798524,
+                        "USD",
+                        10.28211778,
+                        3.2232,
+                        13783,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:SWIM",
+                    "d": [
+                        "SWIM",
+                        "Latham Group, Inc.",
+                        "latham",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        7.84,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.0403338,
+                        0.65,
+                        -0.26666667,
+                        898168,
+                        7041637.12,
+                        937458533.1182196,
+                        "USD",
+                        null,
+                        -0.6145,
+                        2388,
+                        "Producer Manufacturing",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:M",
+                    "d": [
+                        "M",
+                        "Macy's Inc",
+                        "macy-s",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        20.7922,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        9.03093865,
+                        1.7222,
+                        -0.22121212,
+                        9619239,
+                        200005141.1358,
+                        5608338620.724154,
+                        "USD",
+                        3.6240973,
+                        5.3941,
+                        88857,
+                        "Retail Trade",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:NERV",
+                    "d": [
+                        "NERV",
+                        "Minerva Neurosciences, Inc",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        3.16,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.96551724,
+                        0.26,
+                        -0.10909091,
+                        98786,
+                        312163.76,
+                        16875018.92413794,
+                        "USD",
+                        null,
+                        -9.525,
+                        9,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:FUN",
+                    "d": [
+                        "FUN",
+                        "Cedar Fair, L.P.",
+                        "magnum-mgmt",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        42.7,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.92857143,
+                        3.5,
+                        -0.26666667,
+                        95668,
+                        4085023.6,
+                        2435677802.517857,
+                        "USD",
+                        null,
+                        -0.4667,
+                        46000,
+                        "Consumer Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:ANIP",
+                    "d": [
+                        "ANIP",
+                        "ANI Pharmaceuticals, Inc.",
+                        "ani-pharmaceuticals",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        29.65,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.92725937,
+                        2.43,
+                        0.29090909,
+                        109759,
+                        3254354.35,
+                        511368488.1502572,
+                        "USD",
+                        null,
+                        -4.5239,
+                        601,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:CHEF",
+                    "d": [
+                        "CHEF",
+                        "The Chefs' Warehouse, Inc.",
+                        "chefs-warehouse",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        38.369,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.87911464,
+                        3.129,
+                        0.55757576,
+                        301962,
+                        11585979.978,
+                        1466928155.8806186,
+                        "USD",
+                        97.37496546,
+                        0.39,
+                        2712,
+                        "Distribution Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:THRM",
+                    "d": [
+                        "THRM",
+                        "Gentherm Inc",
+                        "gentherm",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        65.07,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.84911342,
+                        5.29,
+                        -0.26666667,
+                        66361,
+                        4318110.27,
+                        2155877102.2673135,
+                        "USD",
+                        27.74142652,
+                        2.1827,
+                        10474,
+                        "Producer Manufacturing",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:PMTS",
+                    "d": [
+                        "PMTS",
+                        "CPI Card Group Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        15.583,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.8198324,
+                        1.263,
+                        0.12424242,
+                        8237,
+                        128357.171,
+                        175393915.66543296,
+                        "USD",
+                        8.60887339,
+                        1.7374,
+                        1150,
+                        "Finance",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:XM",
+                    "d": [
+                        "XM",
+                        "Qualtrics International Inc.",
+                        "qualtrics",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        14.48,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.79038317,
+                        1.17,
+                        0.09090909,
+                        1076718,
+                        15590876.64,
+                        8432068010.446282,
+                        "USD",
+                        null,
+                        -2.1177,
+                        4808,
+                        "Technology Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:AUVI",
+                    "d": [
+                        "AUVI",
+                        "Applied UV, Inc.",
+                        "applied-uv",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.48,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.77192982,
+                        0.2,
+                        0.15454545,
+                        1520769,
+                        3771507.12,
+                        32148670.73684211,
+                        "USD",
+                        null,
+                        -0.7973,
+                        61,
+                        "Process Industries",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:FRSH",
+                    "d": [
+                        "FRSH",
+                        "Freshworks Inc.",
+                        "freshworks",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        13.0795,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.72402328,
+                        1.0495,
+                        0.01398601,
+                        2079387,
+                        27197342.2665,
+                        3813586118.3832088,
+                        "USD",
+                        null,
+                        -11.088,
+                        4600,
+                        "Technology Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:MP",
+                    "d": [
+                        "MP",
+                        "MP Materials Corp.",
+                        "mp-materials",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        34.9,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.72274143,
+                        2.8,
+                        -0.26666667,
+                        1407034,
+                        49105486.6,
+                        6195685896.230529,
+                        "USD",
+                        30.19755409,
+                        1.1635,
+                        365,
+                        "Non-Energy Minerals",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:SEMR",
+                    "d": [
+                        "SEMR",
+                        "SEMrush Holdings, Inc.",
+                        "semrush",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        14.51,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.68913858,
+                        1.16,
+                        0.42424242,
+                        137899,
+                        2000914.49,
+                        2047296610.380524,
+                        "USD",
+                        null,
+                        -0.0523,
+                        1173,
+                        "Technology Services",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:ANVS",
+                    "d": [
+                        "ANVS",
+                        "Annovis Bio, Inc.",
+                        "annovis-bio",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        11.8218,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.65625,
+                        0.9418,
+                        0.33636364,
+                        15800,
+                        186784.44,
+                        96512269.00687498,
+                        "USD",
+                        null,
+                        -2.1471,
+                        3,
+                        "Health Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:TWI",
+                    "d": [
+                        "TWI",
+                        "Titan International, Inc. (DE)",
+                        "titan-international",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        15.755,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.58028946,
+                        1.245,
+                        -0.2,
+                        558038,
+                        8791888.69,
+                        987159151.131978,
+                        "USD",
+                        15.39685908,
+                        0.9482,
+                        7500,
+                        "Producer Manufacturing",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NASDAQ:CMPO",
+                    "d": [
+                        "CMPO",
+                        "CompoSecure, Inc.",
+                        "",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        5.95,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.57664234,
+                        0.47,
+                        -0.26666667,
+                        47285,
+                        281345.75,
+                        452996751.6879562,
+                        "USD",
+                        7.35866792,
+                        0.9152,
+                        715,
+                        "Finance",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:RKLY",
+                    "d": [
+                        "RKLY",
+                        "Rockley Photonics Holdings Limited",
+                        "rockley-photonics",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        2.8,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.52713178,
+                        0.22,
+                        0.2030303,
+                        1060200,
+                        2968560,
+                        360487898.1395349,
+                        "USD",
+                        null,
+                        -1.8802,
+                        null,
+                        "Electronic Technology",
+                        "america"
+                    ]
+                },
+                {
+                    "s": "NYSE:GPS",
+                    "d": [
+                        "GPS",
+                        "Gap, Inc. (The)",
+                        "gap",
+                        "delayed_streaming_900",
+                        "stock",
+                        [
+                            "common"
+                        ],
+                        9.43,
+                        100,
+                        1,
+                        "false",
+                        0,
+                        "USD",
+                        8.5155351,
+                        0.74,
+                        -0.13030303,
+                        5009555,
+                        47240103.65,
+                        3469938814.047181,
+                        "USD",
+                        null,
+                        -0.2025,
+                        97000,
+                        "Retail Trade",
+                        "america"
+                    ]
+                }
+            ]
+        },
+        "column_set_preset_id": "stocks-market-movers",
+        "active_column_set_id": "overview",
+        "hide_load_more": true,
+        "table_size_limit": 100
+    }
+}

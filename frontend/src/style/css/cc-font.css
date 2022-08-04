@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'cc';
+  src:  url('../fonts/cc.eot?347tps');
+  src:  url('../fonts/cc.eot?347tps#iefix') format('embedded-opentype'),
+    url('../fonts/cc.ttf?347tps') format('truetype'),
+    url('../fonts/cc.woff?347tps') format('woff'),
+    url('../fonts/cc.svg?347tps#cc') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="cc-"], [class*=" cc-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'cc' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cc-menu:before {
+  content: "\e900";
+}
+.cc-settings:before {
+  content: "\e901";
+}
+.cc-slider:before {
+  content: "\e902";
+}
+.cc-search:before {
+  content: "\e903";
+}
+.cc-filter:before {
+  content: "\e904";
+}
+.cc-contacts:before {
+  content: "\e905";
+}
+.cc-team:before {
+  content: "\e906";
+}
+.cc-people:before {
+  content: "\e907";
+}
+.cc-info:before {
+  content: "\e908";
+}
+.cc-signout:before {
+  content: "\e909";
+}
+.cc-image-gallery:before {
+  content: "\e90a";
+}
+.cc-favorites:before {
+  content: "\e90b";
+}
+.cc-favorites-fill:before {
+  content: "\e90c";
+}
+.cc-eye:before {
+  content: "\e90d";
+}
+.cc-invisible:before {
+  content: "\e90e";
+}
+.cc-cards-view:before {
+  content: "\e90f";
+}
+.cc-line-view:before {
+  content: "\e910";
+}
+.cc-table:before {
+  content: "\e911";
+}
+.cc-tree:before {
+  content: "\e912";
+}
+.cc-check:before {
+  content: "\e913";
+}
+.cc-double-check:before {
+  content: "\e914";
+}
+.cc-expand-arrow-down:before {
+  content: "\e915";
+}
+.cc-expand-arrow:before {
+  content: "\e916";
+}
+.cc-lock:before {
+  content: "\e917";
+}
+.cc-globe:before {
+  content: "\e918";
+}
+.cc-share:before {
+  content: "\e919";
+}
+.cc-menu-vertical:before {
+  content: "\e91a";
+}
+.cc-more:before {
+  content: "\e91b";
+}
+.cc-plus:before {
+  content: "\e91c";
+}
+.cc-subtract:before {
+  content: "\e91d";
+}
+.cc-cancel:before {
+  content: "\e91e";
+}
+.cc-trash:before {
+  content: "\e91f";
+}
+.cc-notification:before {
+  content: "\e920";
+}
+.cc-add-user:before {
+  content: "\e921";
+}
+.cc-reload:before {
+  content: "\e922";
+}
